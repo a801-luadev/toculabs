@@ -2,6 +2,9 @@ local github_link = "https://github.com/a801-luadev/toculabs"
 local featured_rooms = {
 	"bolodefchoco", "toculabs0youtube", "fortmice"
 }
+local available_modes = {
+	"youtube"
+}
 
 local starting = string.sub(tfm.get.room.name, 1, 2)
 

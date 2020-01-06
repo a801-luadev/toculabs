@@ -59,7 +59,9 @@ commands.lang = function(player, args, quantity)
 end
 
 commands.pw = function(player, args, quantity)
-	if player ~= room_owner then return end
+	if player ~= room_owner then
+		return translatedChatMessage("cant_set_pw", player)
+	end
 
 	if enabled_pw_setting then
 		if quantity >= 1 then
@@ -70,5 +72,33 @@ commands.pw = function(player, args, quantity)
 			tfm.exec.setRoomPassword("")
 			translatedChatMessage("password_removed", player)
 		end
+	else
+		translatedChatMessage("cant_set_pw", player)
 	end
+end
+
+commands.commands = function(player, args, quantity)
+	local text, first = "<j>", true
+	for command in next, commands do
+		if first then
+			first = false
+		else
+			text = text .. ", "
+		end
+		text = text .. "<d><b>!" .. command .. "</b></d>"
+	end
+	tfm.exec.chatMessage(text, player)
+end
+
+commands.modes = function(player, args, quantity)
+	local text, first = "<j>", true
+	for index, mode in next, available_modes do
+		if first then
+			first = false
+		else
+			text = text .. ", "
+		end
+		text = text .. "<d><b>#" .. (module_name or "toculabs") .. "0" .. mode .. "</b></d>"
+	end
+	tfm.exec.chatMessage(text, player)
 end

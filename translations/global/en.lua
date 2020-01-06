@@ -10,8 +10,15 @@ Use [<d>!help</d>] to get more information.
 
 	help = "<r>Not available... Yet.",
 	use_info = "<d>Tip: Use [<j>!info</j>] to get information about this submode.</d>",
-	help_command_help = "Shows information about Tocu Laboratories. You can use [<d>!help [command]</d>] to get more information about a command.",
+	help_command_help = "Shows information about Tocu Laboratories. You can also use [<d>!help [command]</d>] to get more information about a command.",
+	help_command_modes = "Shows available submodes.",
+	help_command_info = "Shows information about the current submode, if any.",
+	help_command_lang = "Sets your module language.",
+	help_command_pw = "Sets the room password if possible.",
+	help_command_commands = "Shows the available commands.",
 	no_help_provided = "<r>The command [<d>!%s</d>] doesn't have any help text.",
+
+	cant_set_pw = "<r>Can't set the password.",
 
 	unknown_command = "<r>Unknown command [<d>!%s</d>].",
 	invalid_syntax = "<r>Invalid syntax. Use [<d>!help %s</d>] to get more information.",
