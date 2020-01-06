@@ -17,5 +17,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install aiotfm
     - name: Host the module
+      env:
+        TRANSFROMAGE_ID: ${{ secrets.TRANSFROMAGE_ID }}
+        TRANSFROMAGE_TOKEN: ${{ secrets.TRANSFROMAGE_TOKEN }}
+        ATELIER_BOT_NAME: ${{ secrets.ATELIER_BOT_NAME }}
+        ATELIER_BOT_PASS: ${{ secrets.ATELIER_BOT_PASS }}
+        HOST_COMMAND: ${{ secrets.HOST_COMMAND }}
+        MODULE_NAME: ${{ secrets.MODULE_NAME }}
       run: |
         python builder.py
