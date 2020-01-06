@@ -22,7 +22,7 @@ system.disableChatCommandDisplay(nil)
 
 commands.help = function(player, args, quantity)
 	if quantity == 0 then
-		translatedChatMessage("help", player)
+		translatedChatMessage("help", player, github_link)
 		if player_langs[player].submode_info then
 			translatedChatMessage("use_info", player)
 		end
