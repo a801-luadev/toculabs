@@ -14,18 +14,26 @@ class Bot(aiotfm.Client):
 		self.password = password
 		self.cmd = cmd + " " + module_name
 		self.init_room = "*#" + module_name
+		self.on_complete_future = self.loop.create_future()
 
 	async def start_running(self):
+		print("Connecting")
 		await self.start(self.api_id, self.api_token)
-		await self.wait_for("on_login_ready", timeout=10.0)
 
+	async def on_login_ready(self):
+		print("Connected to transformice.")
 		await self.login(self.name, self.password, encrypted=False, room=self.init_room)
-		await self.wait_for("on_logged", timeout=10.0)
+
+	async def on_login_result(self, *args):
+		self.on_complete_future.set_exception(Exception("Could not login.", *args))
+
+	async def on_logged()
 		print("Logged in.")
 
-		await self.wait_for("on_joined_room", timeout=10.0)
+	async def on_joined_room()
 		print("Joined the room.")
 		await asyncio.sleep(3.0)
+		await self.host()
 
 	async def host(self):
 		print("Hosting the module.")
@@ -67,5 +75,5 @@ if __name__ == '__main__':
 	loop = asyncio.get_event_loop()
 	bot = Bot(api_id, api_token, name, password, host_cmd, module_name, loop=loop)
 	loop.run_until_complete(bot.start_running())
-	loop.run_until_complete(bot.host())
+	loop.run_until_complete(bot.on_complete_future)
 	bot.close()
