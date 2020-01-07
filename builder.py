@@ -43,7 +43,6 @@ with open(path + ".lua", "w") as file:
 # Minify the code
 process = subprocess.Popen(
 	["luamin", "-f", path + ".lua"],
-	shell=True,
 	stdout=subprocess.PIPE, stderr=subprocess.PIPE
 )
 stdout, stderr = process.communicate()
