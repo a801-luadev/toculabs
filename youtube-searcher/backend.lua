@@ -14,7 +14,7 @@ function on_stream_answer(answer, answer_id)
 		state = 2
 
 		videos._count = 0
-		for id, title, author, desc in string.gmatch(answer, "([^#]+)#([^#]+)#([^#]+)#([^#]+)#") do
+		for id, title, author, desc in string.gmatch(string.sub(answer, 2), "([^#]+)#([^#]+)#([^#]+)#([^#]+)#") do
 			videos._count = videos._count + 1
 			videos[videos._count] = {
 				id = deserialize(id),
