@@ -20,17 +20,17 @@ class Bot(aiotfm.Client):
 		print("Connecting")
 		await self.start(self.api_id, self.api_token)
 
-	async def on_login_ready(self):
+	async def on_login_ready(self, *args):
 		print("Connected to transformice.")
 		await self.login(self.name, self.password, encrypted=False, room=self.init_room)
 
 	async def on_login_result(self, *args):
 		self.on_complete_future.set_exception(Exception("Could not login.", *args))
 
-	async def on_logged():
+	async def on_logged(self):
 		print("Logged in.")
 
-	async def on_joined_room():
+	async def on_joined_room(self, room):
 		print("Joined the room.")
 		await asyncio.sleep(3.0)
 		await self.host()
@@ -72,8 +72,10 @@ if __name__ == '__main__':
 	if password is None:
 		raise TypeError("MODULE_NAME environment variable must exist.")
 
+	print("Starting the bot.")
 	loop = asyncio.get_event_loop()
 	bot = Bot(api_id, api_token, name, password, host_cmd, module_name, loop=loop)
 	loop.run_until_complete(bot.start_running())
+	print("Started.")
 	loop.run_until_complete(bot.on_complete_future)
 	bot.close()
