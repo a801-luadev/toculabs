@@ -27,10 +27,10 @@ class Bot(aiotfm.Client):
 	async def on_login_result(self, *args):
 		self.on_complete_future.set_exception(Exception("Could not login.", *args))
 
-	async def on_logged()
+	async def on_logged():
 		print("Logged in.")
 
-	async def on_joined_room()
+	async def on_joined_room():
 		print("Joined the room.")
 		await asyncio.sleep(3.0)
 		await self.host()
