@@ -1,4 +1,4 @@
-local github_link = "https://github.com/a801-luadev/toculabs"
+local github_link = "https://github.com/a801-luadev/toculabs"--
 local featured_rooms = {
 	"bolodefchoco", "toculabs0youtube", "fortmice"
 }
