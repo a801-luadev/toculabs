@@ -36,13 +36,13 @@ else
 		pos = #module_name + 3
 	else
 		module_name = string.match(tfm.get.room.name, "^[a-z][a-z]%-#([a-z]+)")
-		pos = #module_name + 4
+		pos = #module_name + 5
 	end
 
 	local numbers
 	numbers, submode = string.match(tfm.get.room.name, "^(%d+)([a-z_]+)", pos)
 	if numbers then
-		flags = string.match(tfm.get.room.name, "^(.+)$", #numbers + #submode)
+		flags = string.match(tfm.get.room.name, "^(.+)$", pos + #numbers + #submode)
 	end
 
 	if submode == "youtube" then
