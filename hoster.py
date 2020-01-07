@@ -2,8 +2,6 @@ import os
 import aiotfm
 import asyncio
 
-HOST_MINIFIED = False
-
 class Bot(aiotfm.Client):
 	def __init__(self, api_id, api_token, name, password, cmd, module_name, *args, **kwargs):
 		super().__init__(*args, **kwargs)
@@ -37,9 +35,7 @@ class Bot(aiotfm.Client):
 
 	async def host(self):
 		print("Hosting the module.")
-		path = "builds/latest{}.lua".format(HOST_MINIFIED and ".min" or "")
-
-		with open(path, "rb") as file:
+		with open("builds/latest.lua", "rb") as file:
 			script = file.read()
 		with open("builds/hosted.lua", "wb") as file:
 			file.write(script)

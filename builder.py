@@ -1,5 +1,4 @@
 # Import required modules
-import subprocess
 import datetime
 import os
 import re
@@ -39,23 +38,5 @@ if not os.path.isdir("builds/" + month_year):
 path = "builds/{}/{}".format(month_year, now.strftime("%d---%H-%M-%S"))
 with open(path + ".lua", "w") as file:
 	file.write(script)
-
-# Minify the code
-process = subprocess.Popen(
-	["luamin", "-f", path + ".lua"],
-	stdout=subprocess.PIPE, stderr=subprocess.PIPE
-)
-stdout, stderr = process.communicate()
-
-# If there was an error when minifying, propagate it
-if stderr:
-	raise Exception(stderr)
-
-# Save minified script
-with open(path + ".min.lua", "wb") as file:
-	file.write(stdout)
-
 with open("builds/latest.lua", "w") as file:
 	file.write(script)
-with open("builds/latest.min.lua", "wb") as file:
-	file.write(stdout)
