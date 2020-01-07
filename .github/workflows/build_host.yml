@@ -31,6 +31,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Pull changes
+      run: |
+        git pull origin master
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -49,3 +52,13 @@ jobs:
         MODULE_NAME: ${{ secrets.MODULE_NAME }}
       run: |
         python hoster.py
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Auto Builder"
+        git add -f *
+        git commit -m "Generate build"
+    - name: Push
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
