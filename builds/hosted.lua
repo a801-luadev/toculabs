@@ -615,7 +615,7 @@ else
 
 		local images_data = {
 			background = {id = "16f70f5ab9a.jpg", target = "_0", x = 0, y = 20},
-			loading_search = {id = "16f70f968da.png", target = "#1017", x = -76, y = -58},
+			loading_search = {id = "16f70f968da.png", target = "#1001", x = -76, y = -58},
 			loading_thumbnail = {id = "16f70fdfc06.png", x = -40, y = -31},
 			separator_bar = {id = "16f710e4bf6.png", target = "!1", x = 20},
 
@@ -680,7 +680,7 @@ else
 			local thumb_data = images_data.video_thumbnail
 			local id
 			if video.loading_thumbnail then
-				id = tfm.exec.addImage(load_data.id, "#10" .. (index + 17), load_data.x, load_data.y, player)
+				id = tfm.exec.addImage(load_data.id, "#100" .. (index + 1), load_data.x, load_data.y, player)
 			else
 				id = tfm.exec.addImage(video.thumbnail_id, thumb_data.target, thumb_data.x, -25 + index * 110, player)
 			end
@@ -769,15 +769,10 @@ else
 				featured_rooms[math.random(#featured_rooms)]
 			)
 
-			for obj = 1, 9 do
+			for obj = 1, 5 do
 				tfm.exec.removeImage(
 					tfm.exec.addImage(images_data.invisible.id, "#100" .. obj, 0, 0, player)
 				) -- Removes the ground sprites
-			end
-			for obj = 10, 20 do
-				tfm.exec.removeImage(
-					tfm.exec.addImage(images_data.invisible.id, "#10" .. obj, 0, 0, player)
-				) -- Removes the ground and box sprites
 			end
 
 			images:load("background", player)
