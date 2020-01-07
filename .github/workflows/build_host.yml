@@ -26,8 +26,8 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "Auto Builder"
-        git add *
-        git commit -m -f "Generate build"
+        git add -f *
+        git commit -m "Generate build"
     - name: Push
       uses: ad-m/github-push-action@master
       with:
