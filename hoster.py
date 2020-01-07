@@ -44,7 +44,6 @@ class Bot(aiotfm.Client):
 		with open("builds/hosted.lua", "wb") as file:
 			file.write(script)
 		await self.loadLua(script)
-		await self.wait_for("on_lua_log", lambda msg: "Lua script loaded in" in msg, timeout=10.0)
 		print("Loaded the script.")
 
 		await self.sendCommand(self.cmd)
