@@ -24,6 +24,7 @@ end)
 
 set_stream_failure_callback(function()
 	ui.addTextArea(1, "") -- cancel the request
+	toggle_heartbeat_system(false)
 end)
 
 onEvent("TextAreaCallback", function(id, name, callback)
