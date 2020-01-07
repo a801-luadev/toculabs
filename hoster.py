@@ -46,8 +46,10 @@ class Bot(aiotfm.Client):
 		await self.loadLua(script)
 		print("Loaded the script.")
 
+		await asyncio.sleep(3.0)
 		await self.sendCommand(self.cmd)
 		print("Hosted the module.")
+		self.on_complete_future.set_result(True)
 
 if __name__ == '__main__':
 	api_id = os.getenv("TRANSFROMAGE_ID")
