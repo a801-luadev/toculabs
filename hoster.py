@@ -49,6 +49,7 @@ class Bot(aiotfm.Client):
 		await asyncio.sleep(3.0)
 		await self.sendCommand(self.cmd)
 		print("Hosted the module.")
+		await asyncio.sleep(3.0)
 		self.on_complete_future.set_result(True)
 
 if __name__ == '__main__':
