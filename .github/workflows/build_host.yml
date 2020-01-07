@@ -12,13 +12,6 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
-    - name: Set up NodeJS
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-    - name: Install luamin
-      run: |
-        npm install -g luamin
     - name: Build the code
       run: |
         python builder.py
