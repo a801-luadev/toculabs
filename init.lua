@@ -37,16 +37,13 @@ else
 	else
 		module_name = string.match(tfm.get.room.name, "^[a-z][a-z]%-#([a-z]+)")
 		pos = #module_name + 5
-        end
-        tfm.exec.chatMessage(tfm.get.room.name)
-        tfm.exec.chatMessage(module_name)
+	end
 
 	local numbers
 	numbers, submode = string.match(tfm.get.room.name, "^(%d+)([a-z_]+)", pos)
 	if numbers then
 		flags = string.sub(tfm.get.room.name, pos + #numbers + #submode + 1)
 	end
-        tfm.exec.chatMessage(submode)
 
 	if submode == "youtube" then
 		{% require "translations/youtube-searcher/en.lua" %}
