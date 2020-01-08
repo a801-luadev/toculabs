@@ -1,0 +1,4 @@
+aiotfm
+aiohttp
+bs4
+ujson

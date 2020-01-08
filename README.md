@@ -8,7 +8,7 @@
  You can also check our builder [here](builder.py) and our hoster [here](hoster.py). Remember it runs along with a workflow that is [here](.github/workflows/build_host.yml). Our builder follows the instructions of the [init.lua script](init.lua), specified with tags. Currently there is a single tag (`require`).
 
 ## Can I host something here too?
- Of course you can. Feel free to fork the repository, add your own submode and once you're done, create a pull request. If it requires to run a bot you will need to host it yourself (or use [repl.it](https://repl.it/)). You can also use tools listed here, such as `room-gateway.lua`, located [here](youtube-searcher/room-gateway.lua).
+ Of course you can. Feel free to fork the repository, add your own submode and once you're done, create a pull request. If it requires to run a bot you will need to host it yourself (or use [heroku.com](https://heroku.com/)). You can also use tools listed here, such as `room-gateway.lua`, located [here](youtube-searcher/room-gateway.lua).
  You can do the same if you want to translate anything. Find all the translations [here](translations).
  Remember that adding/removing a file requires to update it in the [init.lua script](init.lua).
 
