@@ -1,9 +1,9 @@
 # Tocu Laboratories
 
- This is the code of the semi-official transformice module **#toculabs**. It is used to test and publish useful stuff. An example, is the `room-gateway` script, which is currently in use in the `youtube-searcher` submode, hosted at **#toculabs0youtube**.
+ This is the code of the semi-official Transformice module **#toculabs**. It is used to test and publish useful stuff. An example, is the `room-gateway` script, which is currently in use in the `youtube-searcher` submode, hosted at **#toculabs0youtube**.
 
-## How does the code run in transformice?
- As you can see, here it is splitted in different files to make the development easier and organized. Before sending it to transformice, we need to turn it into a single file. This process is called building and is automatically done via a github workflow everytime we push something with the [build] keyword in a commit. You can find the latest build [here](builds/latest.lua), or you might also check older builds [here](builds). After it is built, if the commit has a [host] keyword it will also host it in transformice. You can check the hosted build [here](builds/hosted.lua)
+## How does the code run in Transformice?
+ As you can see, here it is splitted in different files to make the development easier and organized. Before sending it to Transformice, we need to turn it into a single file. This process is called building and is automatically done via a Github workflow everytime we push something with the [build] keyword in a commit. You can find the latest build [here](builds/latest.lua), or you might also check older builds [here](builds). After it is built, if the commit has a [host] keyword it will also host it in transformice. You can check the hosted build [here](builds/hosted.lua)
 
  You can also check our builder [here](builder.py) and our hoster [here](hoster.py). Remember it runs along with a workflow that is [here](.github/workflows/build_host.yml). Our builder follows the instructions of the [init.lua script](init.lua), specified with tags. Currently there is a single tag (`require`).
 
