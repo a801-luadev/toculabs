@@ -22,5 +22,6 @@
   <tr>
     <td align="center"><a href="https://github.com/Tocutoeltuco"><img src="https://avatars2.githubusercontent.com/u/24902450?v=4" width="100px;" alt="Iván"/><br /><sub><b>Iván</b></sub></a><br /><a href="#projectManagement-Tocutoeltuco" title="Project Management">📆</a> <a href="#infra-Tocutoeltuco" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/a801-luadev/toculabs/commits?author=Tocutoeltuco" title="Code">💻</a> <a href="https://github.com/a801-luadev/toculabs/commits?author=Tocutoeltuco" title="Tests">⚠️</a> <a href="#ideas-Tocutoeltuco" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://bit.ly/laut-id"><img src="https://avatars2.githubusercontent.com/u/26045253?v=4" width="100px;" alt="Lautenschlager"/><br /><sub><b>Lautenschlager</b></sub></a><br /><a href="#infra-Lautenschlager-id" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://github.com/b1sergiu"><img src="https://avatars2.githubusercontent.com/u/25414803?v=4" width="100px;" alt="Sergiu Bucur"/><br /><sub><b>Sergiu Bucur</b></sub></a><br /><a href="https://github.com/a801-luadev/toculabs/commit/22de637cea33a67fae427ae7b515dfd4e3548321" title="Translation">🌍</a></td>
   </tr>
  </table>
