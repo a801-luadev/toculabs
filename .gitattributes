@@ -2,3 +2,4 @@
 * text=auto
 
 builds/* linguist-generated=true
+translations/*/*.lua linguist-detectable=false
