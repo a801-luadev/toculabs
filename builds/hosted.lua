@@ -25,18 +25,19 @@ global_translations = setmetatable({}, {
 		return global_translations.en
 	end
 })
+
 --[[ File translations/global/en.lua ]]--
 global_translations.en = {
 	welcome = [[<vp>Welcome to <b>Tocu Laboratories</b>!
-Contribute to us in GitHub: <b>%s</b>
+Contribute on GitHub: <b>%s</b>
 Use [<d>!help</d>] to get more information.
 • Join our official Discord server to get help with Lua and modules: <b>https://discord.gg/quch83R</b>
-<d>Tip: You'd also check this room: <b>#%s</b>.</d>]],
+<d>Tip: You'd also want to check this room: <b>#%s</b>.</d>]],
 
 	lang_set = "<j>Module language set to: [<d>English (en)</d>].",
 	current_lang = "<j>Current module language: [<d>English (en)</d>].",
 
-	help = "<vp>What is <b>Tocu Laboratories</b>?\n<j><d><b>Tocu Laboratories</b></d> is a module hosted by <d><b>Tocutoeltuco#0000</b></d>, used to publish and test stuff. You can see the project/submode list by typing <d><b>!modes</b></d> in the chat.\n<vp>Can I host something in the module?\n<j>Of course you can. You need to go to our github repository (<d><b>%s</b></d>), fork it and add your module here. In the README file you'll have all the information.\n<vp>What are the available commands?\n<j>You can use the <d><b>!commands</b></d> command to see them.",
+	help = "<vp>What is <b>Tocu Laboratories</b>?\n<j><d><b>Tocu Laboratories</b></d> is a module hosted by <d><b>Tocutoeltuco#0000</b></d>, used to publish and test stuff. You can see the project/submode list by typing <d><b>!modes</b></d> in the chat.\n<vp>Can I host something in the module?\n<j>Of course you can. You need to go to our Github repository (<d><b>%s</b></d>), fork it and add your module here. You'll find info in the README file.\n<vp>What are the available commands?\n<j>You can use <d><b>!commands</b></d> to see them.",
 	use_info = "<d>Tip: Use [<j>!info</j>] to get information about this submode.</d>",
 	help_command_help = "Shows information about Tocu Laboratories. You can also use [<d>!help [command]</d>] to get more information about a command.",
 	help_command_modes = "Shows available submodes.",
@@ -55,6 +56,38 @@ Use [<d>!help</d>] to get more information.
 	password_removed = "The room password has been removed."
 }
 translations.en = global_translations.en
+
+--[[ File translations/global/ro.lua ]]--
+global_translations.ro = {
+	welcome = [[<vp>Bine ați venit la <b>Tocu Laboratories</b>!
+Contribuiți pe GitHub: <b>%s</b>
+Folosește [<d>!help</d>] pentru mai multe informații.
+• Intrați pe serverul nostru de Discord pentru ajutor la module și Lua: <b>https://discord.gg/quch83R</b>
+<d>Încercați și sala <b>#%s</b>.</d>]],
+
+	lang_set = "<j>Limbă setată la modul: [<d>Română (ro)</d>].",
+	current_lang = "<j>Limba modulului: [<d>Română (ro)</d>].",
+
+	help = "<vp>Ce este <b>Tocu Laboratories</b>?\n<j><d><b>Tocu Laboratories</b></d> este un modul al lui <d><b>Tocutoeltuco#0000</b></d>, folosit pentru a testa și publica lucruri. Poți vedea lista de proiecte cu <d><b>!modes</b></d>.\n<vp>Pot adăuga și eu ceva în modul?\n<j>Sigur că da. Trebuie să mergi pe pagina de Github (<d><b>%s</b></d>), să îi dai fork și să adaugi modulul aici. Ai toate informațiile în fișierul README.\n<vp>Care sunt comenzile disponibile?\n<j>Folosește <d><b>!commands</b></d> pentru a le vedea.",
+	use_info = "<d>Pont: Folosește [<j>!info</j>] pentru a vedea informații despre submode.</d>",
+	help_command_help = "Arată informații despre Tocu Laboratories. Poți folosi și [<d>!help [command]</d>] pentru a vedea mai multe informații despre o comandă.",
+	help_command_modes = "Arată submode-urile disponibile.",
+	help_command_info = "Arată informații depre submode-ul curent.",
+	help_command_lang = "Setează limba modulului.",
+	help_command_pw = "Setează o parolă la sală dacă este posibil.",
+	help_command_commands = "Arată comenzile disponibile.",
+	no_help_provided = "<r>Comanda [<d>!%s</d>] nu are informații.",
+
+	cant_set_pw = "<r>Parola nu poate fi setată.",
+
+	unknown_command = "<r>Comandă inexistentă [<d>!%s</d>].",
+	invalid_syntax = "<r>Sintaxă invalidă. Folosește [<d>!help %s</d>] pentru mai multe informații.",
+
+	new_password = "Parolă nouă la sală: [<d>%s</d>].",
+	password_removed = "Parola sălii a fost ștearsă."
+}
+translations.ro = global_translations.ro
+
 
 --[[ File global/event-handler.lua ]]--
 local onEvent
@@ -458,9 +491,9 @@ else
 		--[[ File translations/youtube-searcher/en.lua ]]--
 		translations.en = setmetatable({
 			cant_search = "<r>Can't make a search yet. Wait until the current one is fully loaded.",
-			scheduled = "<j>Your search is now scheduled in the queue.",
+			scheduled = "<j>Your search was added to the queue.",
 			now_searching = "<j>Searching <d>%s</d>. Requested by <d>%s</d>",
-			failure_searching = "<r>Something happened with the systems. Wait a minute and try to search again.",
+			failure_searching = "<r>Something happened with the systems. Please try to search again in a minute.",
 			internal_error = "<r>Internal error.",
 			video_info = "<j>Video title: <d>%s</d>\nLink: <d>%s</d>\nChannel: <d>%s</d>\nDescription: <d>%s</d>\nThumbnail: <d>%s</d>",
 			not_loaded = "<r>not loaded</r>",
@@ -468,6 +501,21 @@ else
 		}, {
 			__index = global_translations.en
 		})
+
+		--[[ File translations/youtube-searcher/ro.lua ]]--
+		translations.ro = setmetatable({
+			cant_search = "<r>Nu poți căuta încă. Așteaptă până când căutarea din urmă este încărcată complet.",
+			scheduled = "<j>Căutarea ta a fost adăugată în listă.",
+			now_searching = "<j>Se caută <d>%s</d>. Cerută de <d>%s</d>",
+			failure_searching = "<r>A apărut o eroare. Te rugăm să încerci din nou într-un minut.",
+			internal_error = "<r>Eroare internă.",
+			video_info = "<j>TitluȘ <d>%s</d>\nLink: <d>%s</d>\nCanal: <d>%s</d>\nDescriere: <d>%s</d>\nThumbnail: <d>%s</d>",
+			not_loaded = "<r>neîncărcat</r>",
+			click_to_search = "Apasă aici pentru a căuta"
+		}, {
+			__index = global_translations.ro
+		})
+
 		--[[ File youtube-searcher/room-gateway.lua ]]--
 		--[[
 			Here's how it does work:
