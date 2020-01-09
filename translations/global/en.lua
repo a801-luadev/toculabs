@@ -1,9 +1,9 @@
 global_translations.en = {
 	welcome = [[<vp>Welcome to <b>Tocu Laboratories</b>!
-Contribute to us in GitHub: <b>%s</b>
+Contribute on GitHub: <b>%s</b>
 Use [<d>!help</d>] to get more information.
 • Join our official Discord server to get help with Lua and modules: <b>https://discord.gg/quch83R</b>
-<d>Tip: You'd also check this room: <b>#%s</b>.</d>]],
+<d>Tip: You'd also want to check this room: <b>#%s</b>.</d>]],
 
 	lang_set = "<j>Module language set to: [<d>English (en)</d>].",
 	current_lang = "<j>Current module language: [<d>English (en)</d>].",
