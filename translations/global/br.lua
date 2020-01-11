@@ -5,8 +5,8 @@ Use [<d>!help</d>] para obter mais informações.
 • Entre em nosso servidor oficial no Discord para conseguir ajuda em Lua e modules: <b>https://discord.gg/quch83R</b>
 <d>Dica: Você também vai querer checar essa sala: <b>#%s</b>.</d>]],
 
-	lang_set = "<j>Idioma do módulo definido para: [<d>Inglês (en)</d>].",
-	current_lang = "<j>Idioma atual do módulo: [<d>Inglês (en)</d>].",
+	lang_set = "<j>Idioma do módulo definido para: [<d>Português (br / pt)</d>].",
+	current_lang = "<j>Idioma atual do módulo: [<d>Português (br / pt)</d>].",
 
 	help = "<vp>O que são os <b>Laboratórios Tocu</b>?\n<j><d><b>Laboratórios Tocu</b></d> fazem parte de um módulo hospedado por <d><b>Tocutoeltuco#0000</b></d>, usado para publicar e testar coisas. Você pode ver a lista de projetos/submodos digitando <d><b>!modes</b></d> no chat.\n<vp>Posso hospedar algo no módulo?\n<j>É claro que você pode. Você precisa ir até nosso repositório no Github (<d><b>%s</b></d>), clicar em fork fork e adicionar seu módulo lá. Você irá encontrar informações no arquivo README.\n<vp>Quais são os comandos disponíveis?\n<j>Você pode usar <d><b>!commands</b></d> para vê-los.",
 	use_info = "<d>Dica: Use [<j>!info</j>] para obter mais informações sobre esse módulo.</d>",
@@ -27,3 +27,5 @@ Use [<d>!help</d>] para obter mais informações.
 	password_removed = "A senha sala foi removida."
 }
 translations.br = global_translations.br
+global_translations.pt = global_translations.br
+translations.pt = global_translations.pt
