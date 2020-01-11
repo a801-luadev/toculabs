@@ -12,6 +12,9 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
+    - name: Pull changes
+      run: |
+        git pull origin master
     - name: Build the code
       run: |
         python builder.py
