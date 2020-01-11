@@ -1,0 +1,11 @@
+[
+	{
+		"type": "require-file",
+		"file": "translations/init.lua"
+	},
+	{
+		"type": "require-dir",
+		"dir": "translations/global",
+		"recursive": false
+	}
+]

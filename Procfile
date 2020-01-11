@@ -1,1 +1,1 @@
-toculabs: python youtube-searcher/bot/__init__.py
+toculabs: python bots/run.py

@@ -1,30 +1,58 @@
 # Import required modules
 import datetime
+import json
 import os
 import re
 
 # Reading the script
-with open("init.lua", "r") as file:
+with open("init.lua", "rb") as file:
 	script = file.read()
 
 # Evaluating tags (building the code)
-for indent, _open, tag, close in re.findall(r"\n((?:\t| )*)(\{%\s*)(.+?)(\s*%\})", script):
-	args = tag.split(" ")
-	cmd = args.pop(0).lower()
+def eval_tag(data, indent):
+	if data["type"] == "require-file":
+		content = b"--[[ File {file_name} ]]--\n".replace(b"{file_name}", data["file"].encode())
+		with open(data["file"], "rb") as file:
+			content += file.read()
+		content = content.strip() + b"\n--[[ End of file {file_name} ]]--".replace(b"{file_name}", data["file"].encode())
 
-	if cmd == "require":
-		path = eval(" ".join(args))
-		content = "--[[ File {} ]]--".format(path)
-		with open(path, "r") as file:
-			content += "\n" + file.read()
-		content = re.sub(r"\n", "\n{}".format(indent), content)
+	elif data["type"] == "require-dir":
+		content = b"--[[ Directory {dir_name} ]]--".replace(b"{dir_name}", data["dir"].encode())
+		for file in os.listdir(data["dir"]):
+			path = data["dir"] + "/" + file
 
-		script = script.replace(_open + tag + close, content, 1)
+			if os.path.isfile(path):
+				content += b"\n" + eval_tag({"type": "require-file", "file": path}, b"")
+			elif data["recursive"]:
+				content += b"\n" + eval_tag({"type": "require-dir", "dir": path, "recursive": True}, b"")
+		content += b"\n--[[ End of directory {dir_name} ]]--".replace(b"{dir_name}", data["dir"].encode())
+
+	elif data["type"] == "require-package":
+		content = b"--[[ Package {pkg_name} ]]--".replace(b"{pkg_name}", data["package"].encode())
+		for tag in json.load(open(data["package"] + "/package.json", "rb")):
+			content += b"\n" + eval_tag(tag, b"")
+		content += b"\n--[[ End of package {pkg_name} ]]--".replace(b"{pkg_name}", data["package"].encode())
+
+	else:
+		raise TypeError("Unknown tag in package: {}".format(data["type"]))
+
+	return content.replace(b"\n", b"\n" + indent)
+
+for indent, _open, tag, close in re.findall(rb"\n((?:\t| )*)(\{%\s*)(.+?)(\s*%\})", script):
+	args = tag.split(b" ")
+	cmd = args.pop(0).lower().decode()
+
+	if cmd.startswith("require-"):
+		script = script.replace(_open + tag + close, eval_tag({
+			"type": cmd,
+			cmd[8:]: eval(b" ".join(args))
+		}, indent), 1)
+
 	else:
 		raise TypeError("Unknown tag in init.lua: {}".format(cmd))
 
 # Trim spaces before newlines
-script = re.sub(r"[\t ]+\n", "\n", script)
+script = re.sub(rb"[\t ]+\n", "\n", script)
 
 # Create directory if it does not exist.
 now = datetime.datetime.utcnow()
@@ -36,7 +64,7 @@ if not os.path.isdir("builds/" + month_year):
 
 # Save built script
 path = "builds/{}/{}".format(month_year, now.strftime("%d---%H-%M-%S"))
-with open(path + ".lua", "w") as file:
+with open(path + ".lua", "wb") as file:
 	file.write(script)
-with open("builds/latest.lua", "w") as file:
+with open("builds/latest.lua", "wb") as file:
 	file.write(script)

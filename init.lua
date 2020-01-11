@@ -13,25 +13,16 @@ local room_owner
 local enabled_pw_setting = true
 local flags = ""
 
-{% require "translations/init.lua" %}
-{% require "translations/global/en.lua" %}
-{% require "translations/global/br.lua" %}
-{% require "translations/global/es.lua" %}
-{% require "translations/global/he.lua" %}
-{% require "translations/global/ro.lua" %}
-
-{% require "global/event-handler.lua" %}
-{% require "global/translation-handler.lua" %}
-{% require "global/command-handler.lua" %}
+{% require-package "translations" %}
+{% require-package "global" %}
 
 if starting == "*\003" then
 	tribe = string.sub(tfm.get.room.name, 3)
 
 	if tribe == "Runtime error" then
-		{% require "youtube-searcher/room-gateway.lua" %}
-		{% require "youtube-searcher/tunnel.lua" %}
+		{% require-package "bots/tocutobot" %}
 	else
-		{% require "main/init.lua" %}
+		{% require-package "modes/main" %}
 	end
 else
 	local pos
@@ -50,16 +41,9 @@ else
 	end
 
 	if submode == "youtube" then
-		{% require "translations/youtube-searcher/en.lua" %}
-		{% require "translations/youtube-searcher/br.lua" %}
-		{% require "translations/youtube-searcher/es.lua" %}
-		{% require "translations/youtube-searcher/he.lua" %}
-		{% require "translations/youtube-searcher/ro.lua" %}
-		{% require "youtube-searcher/room-gateway.lua" %}
-		{% require "youtube-searcher/frontend.lua" %}
-		{% require "youtube-searcher/backend.lua" %}
+		{% require-package "modes/youtube" %}
 	else
-		{% require "main/init.lua" %}
+		{% require-package "modes/main" %}
 	end
 end
 

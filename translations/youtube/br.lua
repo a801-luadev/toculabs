@@ -10,3 +10,4 @@ translations.br = setmetatable({
 }, {
 	__index = global_translations.br
 })
+translations.pt = translations.br

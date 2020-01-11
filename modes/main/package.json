@@ -1,0 +1,6 @@
+[
+	{
+		"type": "require-file",
+		"file": "modes/main/init.lua"
+	}
+]

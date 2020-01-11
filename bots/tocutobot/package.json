@@ -1,0 +1,10 @@
+[
+	{
+		"type": "require-package",
+		"package": "tech/room-gateway"
+	},
+	{
+		"type": "require-file",
+		"file": "modes/youtube/tunnel.lua"
+	}
+]

@@ -1,0 +1,19 @@
+[
+	{
+		"type": "require-dir",
+		"dir": "translations/youtube",
+		"recursive": false
+	},
+	{
+		"type": "require-package",
+		"package": "tech/room-gateway"
+	},
+	{
+		"type": "require-file",
+		"file": "modes/youtube/frontend.lua"
+	},
+	{
+		"type": "require-file",
+		"file": "modes/youtube/backend.lua"
+	}
+]
