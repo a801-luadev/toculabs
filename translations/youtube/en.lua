@@ -5,7 +5,7 @@ translations.en = setmetatable({
 	failure_searching = "<r>Something happened with the systems. Please try to search again in a minute.",
 	internal_error = "<r>Internal error.",
 	video_info = "<j>Video title: <d>%s</d>\nLink: <d>%s</d>\nChannel: <d>%s</d>\nDescription: <d>%s</d>\nThumbnail: <d>%s</d>",
-	not_loaded = "<r>still unavailable</r>",
+	not_loaded = "<r>unavailable at the moment</r>",
 	click_to_search = "Click here to search"
 }, {
 	__index = global_translations.en
