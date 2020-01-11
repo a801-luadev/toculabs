@@ -5,7 +5,7 @@ translations.es = setmetatable({
 	failure_searching = "<r>Pasó algo en los sistemas. Por favor intentalo de nuevo en un minuto.",
 	internal_error = "<r>Error interno.",
 	video_info = "<j>Título del video: <d>%s</d>\nLink: <d>%s</d>\nCanal: <d>%s</d>\nDescripción: <d>%s</d>\nMiniatura: <d>%s</d>",
-	not_loaded = "<r>sin cargar</r>",
+	not_loaded = "<r>no disponible</r>",
 	click_to_search = "Clic aquí para buscar"
 }, {
 	__index = global_translations.es
