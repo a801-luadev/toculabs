@@ -52,7 +52,7 @@ for indent, _open, tag, close in re.findall(rb"\n((?:\t| )*)(\{%\s*)(.+?)(\s*%\}
 		raise TypeError("Unknown tag in init.lua: {}".format(cmd))
 
 # Trim spaces before newlines
-script = re.sub(rb"[\t ]+\n", "\n", script)
+script = re.sub(rb"[\t ]+\n", b"\n", script.strip())
 
 # Create directory if it does not exist.
 now = datetime.datetime.utcnow()
