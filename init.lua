@@ -15,9 +15,10 @@ local flags = ""
 
 {% require "translations/init.lua" %}
 {% require "translations/global/en.lua" %}
-{% require "translations/global/ro.lua" %}
+{% require "translations/global/br.lua" %}
 {% require "translations/global/es.lua" %}
 {% require "translations/global/he.lua" %}
+{% require "translations/global/ro.lua" %}
 
 {% require "global/event-handler.lua" %}
 {% require "global/translation-handler.lua" %}
@@ -50,9 +51,10 @@ else
 
 	if submode == "youtube" then
 		{% require "translations/youtube-searcher/en.lua" %}
-		{% require "translations/youtube-searcher/ro.lua" %}
+		{% require "translations/youtube-searcher/br.lua" %}
 		{% require "translations/youtube-searcher/es.lua" %}
 		{% require "translations/youtube-searcher/he.lua" %}
+		{% require "translations/youtube-searcher/ro.lua" %}
 		{% require "youtube-searcher/room-gateway.lua" %}
 		{% require "youtube-searcher/frontend.lua" %}
 		{% require "youtube-searcher/backend.lua" %}
