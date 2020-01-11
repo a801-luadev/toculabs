@@ -13,6 +13,7 @@ local room_owner
 local enabled_pw_setting = true
 local flags = ""
 
+--[[ Package translations ]]--
 --[[ File translations/init.lua ]]--
 local translations, global_translations
 translations = setmetatable({}, {
@@ -25,7 +26,8 @@ global_translations = setmetatable({}, {
 		return global_translations.en
 	end
 })
-
+--[[ End of file translations/init.lua ]]--
+--[[ Directory translations/global ]]--
 --[[ File translations/global/en.lua ]]--
 global_translations.en = {
 	welcome = [[<vp>Welcome to <b>Tocu Laboratories</b>!
@@ -56,69 +58,7 @@ Use [<d>!help</d>] to get more information.
 	password_removed = "The room password has been removed."
 }
 translations.en = global_translations.en
-
---[[ File translations/global/br.lua ]]--
-global_translations.br = {
-	welcome = [[<vp>Bem-vindo aos <b>Laboratórios Tocu</b>!
-Contribua no Github: <b>%s</b>
-Use [<d>!help</d>] para obter mais informações.
-• Entre em nosso servidor oficial no Discord para conseguir ajuda em Lua e modules: <b>https://discord.gg/quch83R</b>
-<d>Dica: Você também vai querer checar essa sala: <b>#%s</b>.</d>]],
-
-	lang_set = "<j>Idioma do módulo definido para: [<d>Inglês (en)</d>].",
-	current_lang = "<j>Idioma atual do módulo: [<d>Inglês (en)</d>].",
-
-	help = "<vp>O que são os <b>Laboratórios Tocu</b>?\n<j><d><b>Laboratórios Tocu</b></d> fazem parte de um módulo hospedado por <d><b>Tocutoeltuco#0000</b></d>, usado para publicar e testar coisas. Você pode ver a lista de projetos/submodos digitando <d><b>!modes</b></d> no chat.\n<vp>Posso hospedar algo no módulo?\n<j>É claro que você pode. Você precisa ir até nosso repositório no Github (<d><b>%s</b></d>), clicar em fork fork e adicionar seu módulo lá. Você irá encontrar informações no arquivo README.\n<vp>Quais são os comandos disponíveis?\n<j>Você pode usar <d><b>!commands</b></d> para vê-los.",
-	use_info = "<d>Dica: Use [<j>!info</j>] para obter mais informações sobre esse módulo.</d>",
-	help_command_help = "Mostra informações sobre os Laboratórios Tocu. Você também pode usar [<d>!help [comando]</d>] para obter mais informações sobre um comando.",
-	help_command_modes = "Mostra os submodos disponíveis.",
-	help_command_info = "Mostra informações sobre o submodo atul, se houver.",
-	help_command_lang = "Define o idioma do módulo para você.",
-	help_command_pw = "Define uma senha para a sala, se possível.",
-	help_command_commands = "Mostra os comandos disponíveis.",
-	no_help_provided = "<r>O comando [<d>!%s</d>] não tem texto de ajuda.",
-
-	cant_set_pw = "<r>Não é possível definir uma senha.",
-
-	unknown_command = "<r>Comando desconhecido [<d>!%s</d>].",
-	invalid_syntax = "<r>Formato inválido. Use [<d>!help %s</d>] para obter mais informações.",
-
-	new_password = "Nova senha da sala: [<d>%s</d>].",
-	password_removed = "A senha sala foi removida."
-}
-translations.br = global_translations.br
-
---[[ File translations/global/es.lua ]]--
-global_translations.es = {
-	welcome = [[<vp>¡Bienvenido a <b>Tocu Laboratories</b>!
-Contribuye en GitHub: <b>%s</b>
-Usa [<d>!help</d>] para obtener más información.
-• Entra a nustro servidor de Discord oficial para obtener ayuda con Lua y módulos: <b>https://discord.gg/quch83R</b>
-<d>Tip: Quizás quieras ver esta sala: <b>#%s</b>.</d>]],
-
-	lang_set = "<j>Lenguaje del módulo cambiado a: [<d>Español (es)</d>].",
-	current_lang = "<j>Lenguaje actual del módulo: [<d>Español (es)</d>].",
-
-	help = "<vp>¿Qué es <b>Tocu Laboratories</b>?\n<j><d><b>Tocu Laboratories</b></d> es un módulo alojado por <d><b>Tocutoeltuco#0000</b></d>, usado para publicar y probar cosas. Podés ver la lista de proyectos/submodos escribiendo <d><b>!modes</b></d> en el chat.\n<vp>¿Puedo alojar algo en el módulo?\n<j>Claro que puedes. Debes ir a nuestro repositorio de Github (<d><b>%s</b></d>), copiarlo y añadir tu módulo ahí. Encontrarás informacion en el archivo README.\n<vp>¿Cuáles son los comandos disponibles?\n<j>Podés usar <d><b>!commands</b></d> para verlos.",
-	use_info = "<d>Tip: Usa [<j>!info</j>] para obtener información de este submodo.</d>",
-	help_command_help = "Muestra información sobre Tocu Laboratories. También podes usar [<d>!help [comando]</d>] para obtener más informacion acerca de un comando.",
-	help_command_modes = "Muestra los submodos disponibles.",
-	help_command_info = "Muestra información sobre el submodo actual, si hay alguna.",
-	help_command_lang = "Cambia tu lenguaje en el módulo.",
-	help_command_pw = "Cambia la contraseña de la sala si es posible.",
-	help_command_commands = "Muestra la lista de comandos disponibles.",
-	no_help_provided = "<r>El comando [<d>!%s</d>] no tiene ningun texto de ayuda.",
-
-	cant_set_pw = "<r>No se pudo cambiar la contraseña.",
-
-	unknown_command = "<r>Comando desconocido [<d>!%s</d>].",
-	invalid_syntax = "<r>Estructura inválida. Usa [<d>!help %s</d>] para obtener más información del comando.",
-
-	new_password = "Nueva contraseña de la sala: [<d>%s</d>].",
-	password_removed = "La contraseña de la sala fue eliminada."
-}
-translations.es = global_translations.es
-
+--[[ End of file translations/global/en.lua ]]--
 --[[ File translations/global/he.lua ]]--
 global_translations.he = {
 	welcome = [[<vp>ברוכים הבאים אל <b>מעבדות טוקו</b>!
@@ -149,7 +89,7 @@ global_translations.he = {
 	password_removed = "סיסמת החדר הוסרה."
 }
 translations.he = global_translations.he
-
+--[[ End of file translations/global/he.lua ]]--
 --[[ File translations/global/ro.lua ]]--
 global_translations.ro = {
 	welcome = [[<vp>Bine ați venit la <b>Tocu Laboratories</b>!
@@ -180,8 +120,74 @@ Folosește [<d>!help</d>] pentru mai multe informații.
 	password_removed = "Parola sălii a fost ștearsă."
 }
 translations.ro = global_translations.ro
+--[[ End of file translations/global/ro.lua ]]--
+--[[ File translations/global/es.lua ]]--
+global_translations.es = {
+	welcome = [[<vp>¡Bienvenido a <b>Tocu Laboratories</b>!
+Contribuye en GitHub: <b>%s</b>
+Usa [<d>!help</d>] para obtener más información.
+• Entra a nustro servidor de Discord oficial para obtener ayuda con Lua y módulos: <b>https://discord.gg/quch83R</b>
+<d>Tip: Quizás quieras ver esta sala: <b>#%s</b>.</d>]],
 
+	lang_set = "<j>Lenguaje del módulo cambiado a: [<d>Español (es)</d>].",
+	current_lang = "<j>Lenguaje actual del módulo: [<d>Español (es)</d>].",
 
+	help = "<vp>¿Qué es <b>Tocu Laboratories</b>?\n<j><d><b>Tocu Laboratories</b></d> es un módulo alojado por <d><b>Tocutoeltuco#0000</b></d>, usado para publicar y probar cosas. Podés ver la lista de proyectos/submodos escribiendo <d><b>!modes</b></d> en el chat.\n<vp>¿Puedo alojar algo en el módulo?\n<j>Claro que puedes. Debes ir a nuestro repositorio de Github (<d><b>%s</b></d>), copiarlo y añadir tu módulo ahí. Encontrarás informacion en el archivo README.\n<vp>¿Cuáles son los comandos disponibles?\n<j>Podés usar <d><b>!commands</b></d> para verlos.",
+	use_info = "<d>Tip: Usa [<j>!info</j>] para obtener información de este submodo.</d>",
+	help_command_help = "Muestra información sobre Tocu Laboratories. También podes usar [<d>!help [comando]</d>] para obtener más informacion acerca de un comando.",
+	help_command_modes = "Muestra los submodos disponibles.",
+	help_command_info = "Muestra información sobre el submodo actual, si hay alguna.",
+	help_command_lang = "Cambia tu lenguaje en el módulo.",
+	help_command_pw = "Cambia la contraseña de la sala si es posible.",
+	help_command_commands = "Muestra la lista de comandos disponibles.",
+	no_help_provided = "<r>El comando [<d>!%s</d>] no tiene ningun texto de ayuda.",
+
+	cant_set_pw = "<r>No se pudo cambiar la contraseña.",
+
+	unknown_command = "<r>Comando desconocido [<d>!%s</d>].",
+	invalid_syntax = "<r>Estructura inválida. Usa [<d>!help %s</d>] para obtener más información del comando.",
+
+	new_password = "Nueva contraseña de la sala: [<d>%s</d>].",
+	password_removed = "La contraseña de la sala fue eliminada."
+}
+translations.es = global_translations.es
+--[[ End of file translations/global/es.lua ]]--
+--[[ File translations/global/br.lua ]]--
+global_translations.br = {
+	welcome = [[<vp>Bem-vindo aos <b>Laboratórios Tocu</b>!
+Contribua no Github: <b>%s</b>
+Use [<d>!help</d>] para obter mais informações.
+• Entre em nosso servidor oficial no Discord para conseguir ajuda em Lua e modules: <b>https://discord.gg/quch83R</b>
+<d>Dica: Você também vai querer checar essa sala: <b>#%s</b>.</d>]],
+
+	lang_set = "<j>Idioma do módulo definido para: [<d>Português (br / pt)</d>].",
+	current_lang = "<j>Idioma atual do módulo: [<d>Português (br / pt)</d>].",
+
+	help = "<vp>O que são os <b>Laboratórios Tocu</b>?\n<j><d><b>Laboratórios Tocu</b></d> fazem parte de um módulo hospedado por <d><b>Tocutoeltuco#0000</b></d>, usado para publicar e testar coisas. Você pode ver a lista de projetos/submodos digitando <d><b>!modes</b></d> no chat.\n<vp>Posso hospedar algo no módulo?\n<j>É claro que você pode. Você precisa ir até nosso repositório no Github (<d><b>%s</b></d>), clicar em fork fork e adicionar seu módulo lá. Você irá encontrar informações no arquivo README.\n<vp>Quais são os comandos disponíveis?\n<j>Você pode usar <d><b>!commands</b></d> para vê-los.",
+	use_info = "<d>Dica: Use [<j>!info</j>] para obter mais informações sobre esse módulo.</d>",
+	help_command_help = "Mostra informações sobre os Laboratórios Tocu. Você também pode usar [<d>!help [comando]</d>] para obter mais informações sobre um comando.",
+	help_command_modes = "Mostra os submodos disponíveis.",
+	help_command_info = "Mostra informações sobre o submodo atul, se houver.",
+	help_command_lang = "Define o idioma do módulo para você.",
+	help_command_pw = "Define uma senha para a sala, se possível.",
+	help_command_commands = "Mostra os comandos disponíveis.",
+	no_help_provided = "<r>O comando [<d>!%s</d>] não tem texto de ajuda.",
+
+	cant_set_pw = "<r>Não é possível definir uma senha.",
+
+	unknown_command = "<r>Comando desconhecido [<d>!%s</d>].",
+	invalid_syntax = "<r>Formato inválido. Use [<d>!help %s</d>] para obter mais informações.",
+
+	new_password = "Nova senha da sala: [<d>%s</d>].",
+	password_removed = "A senha sala foi removida."
+}
+translations.br = global_translations.br
+global_translations.pt = global_translations.br
+translations.pt = global_translations.pt
+--[[ End of file translations/global/br.lua ]]--
+--[[ End of directory translations/global ]]--
+--[[ End of package translations ]]--
+--[[ Package global ]]--
 --[[ File global/event-handler.lua ]]--
 local onEvent
 do
@@ -208,6 +214,7 @@ do
 		evt[evt._count] = callback
 	end
 end
+--[[ End of file global/event-handler.lua ]]--
 --[[ File global/translation-handler.lua ]]--
 local player_langs = {}
 
@@ -237,6 +244,7 @@ end
 onEvent("NewPlayer", function(player)
 	player_langs[player] = translations[tfm.get.room.playerList[player].community]
 end)
+--[[ End of file global/translation-handler.lua ]]--
 --[[ File global/command-handler.lua ]]--
 local commands = {}
 
@@ -342,12 +350,16 @@ commands.modes = function(player, args, quantity)
 	end
 	tfm.exec.chatMessage(text, player)
 end
+--[[ End of file global/command-handler.lua ]]--
+--[[ End of package global ]]--
 
 if starting == "*\003" then
 	tribe = string.sub(tfm.get.room.name, 3)
 
 	if tribe == "Runtime error" then
-		--[[ File youtube-searcher/room-gateway.lua ]]--
+		--[[ Package bots/tocutobot ]]--
+		--[[ Package tech/room-gateway ]]--
+		--[[ File tech/room-gateway/script.lua ]]--
 		--[[
 			Here's how it does work:
 
@@ -490,7 +502,9 @@ if starting == "*\003" then
 				try_heartbeat()
 			end)
 		end
-		--[[ File youtube-searcher/tunnel.lua ]]--
+		--[[ End of file tech/room-gateway/script.lua ]]--
+		--[[ End of package tech/room-gateway ]]--
+		--[[ File modes/youtube/tunnel.lua ]]--
 		local images = {_count = 0, _index = 0}
 		local waiting_images = false
 		local send_image = false
@@ -542,8 +556,11 @@ if starting == "*\003" then
 		onEvent("Loop", function()
 			system.loadPlayerData(stream_bot)
 		end)
+		--[[ End of file modes/youtube/tunnel.lua ]]--
+		--[[ End of package bots/tocutobot ]]--
 	else
-		--[[ File main/init.lua ]]--
+		--[[ Package modes/main ]]--
+		--[[ File modes/main/init.lua ]]--
 		local bot_status = {}
 		local bot_loading = 0
 		local next_load = 0
@@ -681,6 +698,8 @@ if starting == "*\003" then
 		if tfm.get.room.name == "*#toculabs0village" then
 			bot_loading = 1
 		end
+		--[[ End of file modes/main/init.lua ]]--
+		--[[ End of package modes/main ]]--
 	end
 else
 	local pos
@@ -699,7 +718,9 @@ else
 	end
 
 	if submode == "youtube" then
-		--[[ File translations/youtube-searcher/en.lua ]]--
+		--[[ Package modes/youtube ]]--
+		--[[ Directory translations/youtube ]]--
+		--[[ File translations/youtube/en.lua ]]--
 		translations.en = setmetatable({
 			cant_search = "<r>Can't make a search yet. Wait until the current one is fully loaded.",
 			scheduled = "<j>Your search was added to the queue.",
@@ -707,41 +728,13 @@ else
 			failure_searching = "<r>Something happened with the systems. Please try to search again in a minute.",
 			internal_error = "<r>Internal error.",
 			video_info = "<j>Video title: <d>%s</d>\nLink: <d>%s</d>\nChannel: <d>%s</d>\nDescription: <d>%s</d>\nThumbnail: <d>%s</d>",
-			not_loaded = "<r>still unavailable</r>",
+			not_loaded = "<r>unavailable at the moment</r>",
 			click_to_search = "Click here to search"
 		}, {
 			__index = global_translations.en
 		})
-
-		--[[ File translations/youtube-searcher/br.lua ]]--
-		translations.br = setmetatable({
-			cant_search = "<r>Não é possível fazer uma procura ainda. Aguarde até que a atual tenha carregado completamente.",
-			scheduled = "<j>Sua pesquisa foi adicionada à fila.",
-			now_searching = "<j>Pesquisando <d>%s</d>. Requisitado por <d>%s</d>",
-			failure_searching = "<r>Algo aconteceu com os sistemas. Por favor, tente novamente mais tarde.",
-			internal_error = "<r>Erro interno.",
-			video_info = "<j>Título do vídeo: <d>%s</d>\nLink: <d>%s</d>\nCanal: <d>%s</d>\nDescrição: <d>%s</d>\nThumbnail: <d>%s</d>",
-			not_loaded = "<r>indisponível no momento</r>",
-			click_to_search = "Clique aqui para pesquisar"
-		}, {
-			__index = global_translations.br
-		})
-
-		--[[ File translations/youtube-searcher/es.lua ]]--
-		translations.es = setmetatable({
-			cant_search = "<r>No se puede hacer una busqueda aún. Espera a que la actual termine de cargar.",
-			scheduled = "<j>Tu busqueda fue añadida a la lista de espera.",
-			now_searching = "<j>Buscando <d>%s</d>. Pedido por <d>%s</d>",
-			failure_searching = "<r>Pasó algo en los sistemas. Por favor intentalo de nuevo en un minuto.",
-			internal_error = "<r>Error interno.",
-			video_info = "<j>Título del video: <d>%s</d>\nLink: <d>%s</d>\nCanal: <d>%s</d>\nDescripción: <d>%s</d>\nMiniatura: <d>%s</d>",
-			not_loaded = "<r>no disponible</r>",
-			click_to_search = "Clic aquí para buscar"
-		}, {
-			__index = global_translations.es
-		})
-
-		--[[ File translations/youtube-searcher/he.lua ]]--
+		--[[ End of file translations/youtube/en.lua ]]--
+		--[[ File translations/youtube/he.lua ]]--
 		translations.he = setmetatable({
 			cant_search = "<r>לא ניתן לבצע חיפוש כרגע. חכו עד שהחיפוש הנוכחי נגמר לגמרי.",
 			scheduled = "<j>החיפוש שלכם נוסף לתור.",
@@ -754,8 +747,8 @@ else
 		}, {
 			__index = global_translations.he
 		})
-
-		--[[ File translations/youtube-searcher/ro.lua ]]--
+		--[[ End of file translations/youtube/he.lua ]]--
+		--[[ File translations/youtube/ro.lua ]]--
 		translations.ro = setmetatable({
 			cant_search = "<r>Nu poți căuta încă. Așteaptă până când căutarea din urmă este încărcată complet.",
 			scheduled = "<j>Căutarea ta a fost adăugată în listă.",
@@ -768,8 +761,39 @@ else
 		}, {
 			__index = global_translations.ro
 		})
-
-		--[[ File youtube-searcher/room-gateway.lua ]]--
+		--[[ End of file translations/youtube/ro.lua ]]--
+		--[[ File translations/youtube/es.lua ]]--
+		translations.es = setmetatable({
+			cant_search = "<r>No se puede hacer una busqueda aún. Espera a que la actual termine de cargar.",
+			scheduled = "<j>Tu busqueda fue añadida a la lista de espera.",
+			now_searching = "<j>Buscando <d>%s</d>. Pedido por <d>%s</d>",
+			failure_searching = "<r>Pasó algo en los sistemas. Por favor intentalo de nuevo en un minuto.",
+			internal_error = "<r>Error interno.",
+			video_info = "<j>Título del video: <d>%s</d>\nLink: <d>%s</d>\nCanal: <d>%s</d>\nDescripción: <d>%s</d>\nMiniatura: <d>%s</d>",
+			not_loaded = "<r>no disponible</r>",
+			click_to_search = "Clic aquí para buscar"
+		}, {
+			__index = global_translations.es
+		})
+		--[[ End of file translations/youtube/es.lua ]]--
+		--[[ File translations/youtube/br.lua ]]--
+		translations.br = setmetatable({
+			cant_search = "<r>Não é possível fazer uma procura ainda. Aguarde até que a atual tenha carregado completamente.",
+			scheduled = "<j>Sua pesquisa foi adicionada à fila.",
+			now_searching = "<j>Pesquisando <d>%s</d>. Requisitado por <d>%s</d>",
+			failure_searching = "<r>Algo aconteceu com os sistemas. Por favor, tente novamente mais tarde.",
+			internal_error = "<r>Erro interno.",
+			video_info = "<j>Título do vídeo: <d>%s</d>\nLink: <d>%s</d>\nCanal: <d>%s</d>\nDescrição: <d>%s</d>\nThumbnail: <d>%s</d>",
+			not_loaded = "<r>indisponível no momento</r>",
+			click_to_search = "Clique aqui para pesquisar"
+		}, {
+			__index = global_translations.br
+		})
+		translations.pt = translations.br
+		--[[ End of file translations/youtube/br.lua ]]--
+		--[[ End of directory translations/youtube ]]--
+		--[[ Package tech/room-gateway ]]--
+		--[[ File tech/room-gateway/script.lua ]]--
 		--[[
 			Here's how it does work:
 
@@ -912,7 +936,9 @@ else
 				try_heartbeat()
 			end)
 		end
-		--[[ File youtube-searcher/frontend.lua ]]--
+		--[[ End of file tech/room-gateway/script.lua ]]--
+		--[[ End of package tech/room-gateway ]]--
+		--[[ File modes/youtube/frontend.lua ]]--
 		local request_video -- allocated here but defined in backend, so it can be used in frontend
 
 		local images_data = {
@@ -1143,7 +1169,8 @@ else
 		tfm.exec.disableMortCommand(true)
 		tfm.exec.newGame(7671242)
 		tfm.exec.setGameTime(99999)
-		--[[ File youtube-searcher/backend.lua ]]--
+		--[[ End of file modes/youtube/frontend.lua ]]--
+		--[[ File modes/youtube/backend.lua ]]--
 		local load_stream_data = false
 
 		local deserializing_values = {
@@ -1232,8 +1259,11 @@ else
 				system.loadPlayerData(stream_bot)
 			end
 		end)
+		--[[ End of file modes/youtube/backend.lua ]]--
+		--[[ End of package modes/youtube ]]--
 	else
-		--[[ File main/init.lua ]]--
+		--[[ Package modes/main ]]--
+		--[[ File modes/main/init.lua ]]--
 		local bot_status = {}
 		local bot_loading = 0
 		local next_load = 0
@@ -1371,6 +1401,8 @@ else
 		if tfm.get.room.name == "*#toculabs0village" then
 			bot_loading = 1
 		end
+		--[[ End of file modes/main/init.lua ]]--
+		--[[ End of package modes/main ]]--
 	end
 end
 
