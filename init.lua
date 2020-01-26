@@ -19,7 +19,7 @@ local flags = ""
 if starting == "*\003" then
 	tribe = string.sub(tfm.get.room.name, 3)
 
-	if tribe == "Runtime error" then
+	if tribe == "TocuLabs 1" then
 		{% require-package "bots/tocutobot" %}
 	else
 		{% require-package "modes/main" %}
