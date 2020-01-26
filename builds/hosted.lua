@@ -28,6 +28,39 @@ global_translations = setmetatable({}, {
 })
 --[[ End of file translations/init.lua ]]--
 --[[ Directory translations/global ]]--
+--[[ File translations/global/br.lua ]]--
+global_translations.br = {
+	welcome = [[<vp>Bem-vindo aos <b>Laboratórios Tocu</b>!
+Contribua no Github: <b>%s</b>
+Use [<d>!help</d>] para obter mais informações.
+• Entre em nosso servidor oficial no Discord para conseguir ajuda em Lua e modules: <b>https://discord.gg/quch83R</b>
+<d>Dica: Você também vai querer checar essa sala: <b>#%s</b>.</d>]],
+
+	lang_set = "<j>Idioma do módulo definido para: [<d>Português (br / pt)</d>].",
+	current_lang = "<j>Idioma atual do módulo: [<d>Português (br / pt)</d>].",
+
+	help = "<vp>O que são os <b>Laboratórios Tocu</b>?\n<j><d><b>Laboratórios Tocu</b></d> fazem parte de um módulo hospedado por <d><b>Tocutoeltuco#0000</b></d>, usado para publicar e testar coisas. Você pode ver a lista de projetos/submodos digitando <d><b>!modes</b></d> no chat.\n<vp>Posso hospedar algo no módulo?\n<j>É claro que você pode. Você precisa ir até nosso repositório no Github (<d><b>%s</b></d>), clicar em fork fork e adicionar seu módulo lá. Você irá encontrar informações no arquivo README.\n<vp>Quais são os comandos disponíveis?\n<j>Você pode usar <d><b>!commands</b></d> para vê-los.",
+	use_info = "<d>Dica: Use [<j>!info</j>] para obter mais informações sobre esse módulo.</d>",
+	help_command_help = "Mostra informações sobre os Laboratórios Tocu. Você também pode usar [<d>!help [comando]</d>] para obter mais informações sobre um comando.",
+	help_command_modes = "Mostra os submodos disponíveis.",
+	help_command_info = "Mostra informações sobre o submodo atul, se houver.",
+	help_command_lang = "Define o idioma do módulo para você.",
+	help_command_pw = "Define uma senha para a sala, se possível.",
+	help_command_commands = "Mostra os comandos disponíveis.",
+	no_help_provided = "<r>O comando [<d>!%s</d>] não tem texto de ajuda.",
+
+	cant_set_pw = "<r>Não é possível definir uma senha.",
+
+	unknown_command = "<r>Comando desconhecido [<d>!%s</d>].",
+	invalid_syntax = "<r>Formato inválido. Use [<d>!help %s</d>] para obter mais informações.",
+
+	new_password = "Nova senha da sala: [<d>%s</d>].",
+	password_removed = "A senha sala foi removida."
+}
+translations.br = global_translations.br
+global_translations.pt = global_translations.br
+translations.pt = global_translations.pt
+--[[ End of file translations/global/br.lua ]]--
 --[[ File translations/global/en.lua ]]--
 global_translations.en = {
 	welcome = [[<vp>Welcome to <b>Tocu Laboratories</b>!
@@ -90,37 +123,6 @@ global_translations.he = {
 }
 translations.he = global_translations.he
 --[[ End of file translations/global/he.lua ]]--
---[[ File translations/global/ro.lua ]]--
-global_translations.ro = {
-	welcome = [[<vp>Bine ați venit la <b>Tocu Laboratories</b>!
-Contribuiți pe GitHub: <b>%s</b>
-Folosește [<d>!help</d>] pentru mai multe informații.
-• Intrați pe serverul nostru de Discord pentru ajutor la module și Lua: <b>https://discord.gg/quch83R</b>
-<d>Încercați și sala <b>#%s</b>.</d>]],
-
-	lang_set = "<j>Limbă setată la modul: [<d>Română (ro)</d>].",
-	current_lang = "<j>Limba modulului: [<d>Română (ro)</d>].",
-
-	help = "<vp>Ce este <b>Tocu Laboratories</b>?\n<j><d><b>Tocu Laboratories</b></d> este un modul al lui <d><b>Tocutoeltuco#0000</b></d>, folosit pentru a testa și publica lucruri. Poți vedea lista de proiecte cu <d><b>!modes</b></d>.\n<vp>Pot adăuga și eu ceva în modul?\n<j>Sigur că da. Trebuie să mergi pe pagina de Github (<d><b>%s</b></d>), să îi dai fork și să adaugi modulul aici. Ai toate informațiile în fișierul README.\n<vp>Care sunt comenzile disponibile?\n<j>Folosește <d><b>!commands</b></d> pentru a le vedea.",
-	use_info = "<d>Pont: Folosește [<j>!info</j>] pentru a vedea informații despre submode.</d>",
-	help_command_help = "Arată informații despre Tocu Laboratories. Poți folosi și [<d>!help [command]</d>] pentru a vedea mai multe informații despre o comandă.",
-	help_command_modes = "Arată submode-urile disponibile.",
-	help_command_info = "Arată informații depre submode-ul curent.",
-	help_command_lang = "Setează limba modulului.",
-	help_command_pw = "Setează o parolă la sală dacă este posibil.",
-	help_command_commands = "Arată comenzile disponibile.",
-	no_help_provided = "<r>Comanda [<d>!%s</d>] nu are informații.",
-
-	cant_set_pw = "<r>Parola nu poate fi setată.",
-
-	unknown_command = "<r>Comandă inexistentă [<d>!%s</d>].",
-	invalid_syntax = "<r>Sintaxă invalidă. Folosește [<d>!help %s</d>] pentru mai multe informații.",
-
-	new_password = "Parolă nouă la sală: [<d>%s</d>].",
-	password_removed = "Parola sălii a fost ștearsă."
-}
-translations.ro = global_translations.ro
---[[ End of file translations/global/ro.lua ]]--
 --[[ File translations/global/es.lua ]]--
 global_translations.es = {
 	welcome = [[<vp>¡Bienvenido a <b>Tocu Laboratories</b>!
@@ -152,39 +154,37 @@ Usa [<d>!help</d>] para obtener más información.
 }
 translations.es = global_translations.es
 --[[ End of file translations/global/es.lua ]]--
---[[ File translations/global/br.lua ]]--
-global_translations.br = {
-	welcome = [[<vp>Bem-vindo aos <b>Laboratórios Tocu</b>!
-Contribua no Github: <b>%s</b>
-Use [<d>!help</d>] para obter mais informações.
-• Entre em nosso servidor oficial no Discord para conseguir ajuda em Lua e modules: <b>https://discord.gg/quch83R</b>
-<d>Dica: Você também vai querer checar essa sala: <b>#%s</b>.</d>]],
+--[[ File translations/global/ro.lua ]]--
+global_translations.ro = {
+	welcome = [[<vp>Bine ați venit la <b>Tocu Laboratories</b>!
+Contribuiți pe GitHub: <b>%s</b>
+Folosește [<d>!help</d>] pentru mai multe informații.
+• Intrați pe serverul nostru de Discord pentru ajutor la module și Lua: <b>https://discord.gg/quch83R</b>
+<d>Încercați și sala <b>#%s</b>.</d>]],
 
-	lang_set = "<j>Idioma do módulo definido para: [<d>Português (br / pt)</d>].",
-	current_lang = "<j>Idioma atual do módulo: [<d>Português (br / pt)</d>].",
+	lang_set = "<j>Limbă setată la modul: [<d>Română (ro)</d>].",
+	current_lang = "<j>Limba modulului: [<d>Română (ro)</d>].",
 
-	help = "<vp>O que são os <b>Laboratórios Tocu</b>?\n<j><d><b>Laboratórios Tocu</b></d> fazem parte de um módulo hospedado por <d><b>Tocutoeltuco#0000</b></d>, usado para publicar e testar coisas. Você pode ver a lista de projetos/submodos digitando <d><b>!modes</b></d> no chat.\n<vp>Posso hospedar algo no módulo?\n<j>É claro que você pode. Você precisa ir até nosso repositório no Github (<d><b>%s</b></d>), clicar em fork fork e adicionar seu módulo lá. Você irá encontrar informações no arquivo README.\n<vp>Quais são os comandos disponíveis?\n<j>Você pode usar <d><b>!commands</b></d> para vê-los.",
-	use_info = "<d>Dica: Use [<j>!info</j>] para obter mais informações sobre esse módulo.</d>",
-	help_command_help = "Mostra informações sobre os Laboratórios Tocu. Você também pode usar [<d>!help [comando]</d>] para obter mais informações sobre um comando.",
-	help_command_modes = "Mostra os submodos disponíveis.",
-	help_command_info = "Mostra informações sobre o submodo atul, se houver.",
-	help_command_lang = "Define o idioma do módulo para você.",
-	help_command_pw = "Define uma senha para a sala, se possível.",
-	help_command_commands = "Mostra os comandos disponíveis.",
-	no_help_provided = "<r>O comando [<d>!%s</d>] não tem texto de ajuda.",
+	help = "<vp>Ce este <b>Tocu Laboratories</b>?\n<j><d><b>Tocu Laboratories</b></d> este un modul al lui <d><b>Tocutoeltuco#0000</b></d>, folosit pentru a testa și publica lucruri. Poți vedea lista de proiecte cu <d><b>!modes</b></d>.\n<vp>Pot adăuga și eu ceva în modul?\n<j>Sigur că da. Trebuie să mergi pe pagina de Github (<d><b>%s</b></d>), să îi dai fork și să adaugi modulul aici. Ai toate informațiile în fișierul README.\n<vp>Care sunt comenzile disponibile?\n<j>Folosește <d><b>!commands</b></d> pentru a le vedea.",
+	use_info = "<d>Pont: Folosește [<j>!info</j>] pentru a vedea informații despre submode.</d>",
+	help_command_help = "Arată informații despre Tocu Laboratories. Poți folosi și [<d>!help [command]</d>] pentru a vedea mai multe informații despre o comandă.",
+	help_command_modes = "Arată submode-urile disponibile.",
+	help_command_info = "Arată informații depre submode-ul curent.",
+	help_command_lang = "Setează limba modulului.",
+	help_command_pw = "Setează o parolă la sală dacă este posibil.",
+	help_command_commands = "Arată comenzile disponibile.",
+	no_help_provided = "<r>Comanda [<d>!%s</d>] nu are informații.",
 
-	cant_set_pw = "<r>Não é possível definir uma senha.",
+	cant_set_pw = "<r>Parola nu poate fi setată.",
 
-	unknown_command = "<r>Comando desconhecido [<d>!%s</d>].",
-	invalid_syntax = "<r>Formato inválido. Use [<d>!help %s</d>] para obter mais informações.",
+	unknown_command = "<r>Comandă inexistentă [<d>!%s</d>].",
+	invalid_syntax = "<r>Sintaxă invalidă. Folosește [<d>!help %s</d>] pentru mai multe informații.",
 
-	new_password = "Nova senha da sala: [<d>%s</d>].",
-	password_removed = "A senha sala foi removida."
+	new_password = "Parolă nouă la sală: [<d>%s</d>].",
+	password_removed = "Parola sălii a fost ștearsă."
 }
-translations.br = global_translations.br
-global_translations.pt = global_translations.br
-translations.pt = global_translations.pt
---[[ End of file translations/global/br.lua ]]--
+translations.ro = global_translations.ro
+--[[ End of file translations/global/ro.lua ]]--
 --[[ End of directory translations/global ]]--
 --[[ End of package translations ]]--
 --[[ Package global ]]--
@@ -356,7 +356,7 @@ end
 if starting == "*\003" then
 	tribe = string.sub(tfm.get.room.name, 3)
 
-	if tribe == "Runtime error" then
+	if tribe == "TocuLabs 1" then
 		--[[ Package bots/tocutobot ]]--
 		--[[ Package tech/room-gateway ]]--
 		--[[ File tech/room-gateway/script.lua ]]--
@@ -720,6 +720,21 @@ else
 	if submode == "youtube" then
 		--[[ Package modes/youtube ]]--
 		--[[ Directory translations/youtube ]]--
+		--[[ File translations/youtube/br.lua ]]--
+		translations.br = setmetatable({
+			cant_search = "<r>Não é possível fazer uma procura ainda. Aguarde até que a atual tenha carregado completamente.",
+			scheduled = "<j>Sua pesquisa foi adicionada à fila.",
+			now_searching = "<j>Pesquisando <d>%s</d>. Requisitado por <d>%s</d>",
+			failure_searching = "<r>Algo aconteceu com os sistemas. Por favor, tente novamente mais tarde.",
+			internal_error = "<r>Erro interno.",
+			video_info = "<j>Título do vídeo: <d>%s</d>\nLink: <d>%s</d>\nCanal: <d>%s</d>\nDescrição: <d>%s</d>\nThumbnail: <d>%s</d>",
+			not_loaded = "<r>indisponível no momento</r>",
+			click_to_search = "Clique aqui para pesquisar"
+		}, {
+			__index = global_translations.br
+		})
+		translations.pt = translations.br
+		--[[ End of file translations/youtube/br.lua ]]--
 		--[[ File translations/youtube/en.lua ]]--
 		translations.en = setmetatable({
 			cant_search = "<r>Can't make a search yet. Wait until the current one is fully loaded.",
@@ -748,20 +763,6 @@ else
 			__index = global_translations.he
 		})
 		--[[ End of file translations/youtube/he.lua ]]--
-		--[[ File translations/youtube/ro.lua ]]--
-		translations.ro = setmetatable({
-			cant_search = "<r>Nu poți căuta încă. Așteaptă până când căutarea din urmă este încărcată complet.",
-			scheduled = "<j>Căutarea ta a fost adăugată în listă.",
-			now_searching = "<j>Se caută <d>%s</d>. Cerută de <d>%s</d>",
-			failure_searching = "<r>A apărut o eroare. Te rugăm să încerci din nou într-un minut.",
-			internal_error = "<r>Eroare internă.",
-			video_info = "<j>Titlu: <d>%s</d>\nLink: <d>%s</d>\nCanal: <d>%s</d>\nDescriere: <d>%s</d>\nThumbnail: <d>%s</d>",
-			not_loaded = "<r>neîncărcat</r>",
-			click_to_search = "Apasă aici pentru a căuta"
-		}, {
-			__index = global_translations.ro
-		})
-		--[[ End of file translations/youtube/ro.lua ]]--
 		--[[ File translations/youtube/es.lua ]]--
 		translations.es = setmetatable({
 			cant_search = "<r>No se puede hacer una busqueda aún. Espera a que la actual termine de cargar.",
@@ -776,21 +777,20 @@ else
 			__index = global_translations.es
 		})
 		--[[ End of file translations/youtube/es.lua ]]--
-		--[[ File translations/youtube/br.lua ]]--
-		translations.br = setmetatable({
-			cant_search = "<r>Não é possível fazer uma procura ainda. Aguarde até que a atual tenha carregado completamente.",
-			scheduled = "<j>Sua pesquisa foi adicionada à fila.",
-			now_searching = "<j>Pesquisando <d>%s</d>. Requisitado por <d>%s</d>",
-			failure_searching = "<r>Algo aconteceu com os sistemas. Por favor, tente novamente mais tarde.",
-			internal_error = "<r>Erro interno.",
-			video_info = "<j>Título do vídeo: <d>%s</d>\nLink: <d>%s</d>\nCanal: <d>%s</d>\nDescrição: <d>%s</d>\nThumbnail: <d>%s</d>",
-			not_loaded = "<r>indisponível no momento</r>",
-			click_to_search = "Clique aqui para pesquisar"
+		--[[ File translations/youtube/ro.lua ]]--
+		translations.ro = setmetatable({
+			cant_search = "<r>Nu poți căuta încă. Așteaptă până când căutarea din urmă este încărcată complet.",
+			scheduled = "<j>Căutarea ta a fost adăugată în listă.",
+			now_searching = "<j>Se caută <d>%s</d>. Cerută de <d>%s</d>",
+			failure_searching = "<r>A apărut o eroare. Te rugăm să încerci din nou într-un minut.",
+			internal_error = "<r>Eroare internă.",
+			video_info = "<j>Titlu: <d>%s</d>\nLink: <d>%s</d>\nCanal: <d>%s</d>\nDescriere: <d>%s</d>\nThumbnail: <d>%s</d>",
+			not_loaded = "<r>neîncărcat</r>",
+			click_to_search = "Apasă aici pentru a căuta"
 		}, {
-			__index = global_translations.br
+			__index = global_translations.ro
 		})
-		translations.pt = translations.br
-		--[[ End of file translations/youtube/br.lua ]]--
+		--[[ End of file translations/youtube/ro.lua ]]--
 		--[[ End of directory translations/youtube ]]--
 		--[[ Package tech/room-gateway ]]--
 		--[[ File tech/room-gateway/script.lua ]]--
